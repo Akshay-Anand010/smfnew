@@ -31,7 +31,7 @@
 	padding: 25px 40px;
 	position: relative;
     border-radius: 15px;
-	font-size: 180%;
+	font-size: 200%;
 }
 
 .lboard_section .lboard_tabs ul{
@@ -80,7 +80,7 @@
 }
 
 .lboard_wrap .lboard_mem .name_bar p{
-    color: yellow;
+    color:orangered;
     font-size: 100%;
     
 }
@@ -91,7 +91,7 @@
 
 .lboard_wrap .lboard_mem .points{
 	width: 100px;
-    color: yellow;
+    color:orangered;
     font-size: 100%;
 }
 
