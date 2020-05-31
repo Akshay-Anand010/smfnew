@@ -1,0 +1,98 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'lato', sans-serif;
+    
+  }
+
+  h1{
+      font-size: 350%;
+      text-align: center ;
+      color: yellow;
+      box-sizing: border-box;
+      margin-top: 1cm;   
+  }
+
+
+
+.wrapper{
+	width: 100%;
+	height: 100%;
+}
+
+.lboard_section{
+	width: 500px;
+	height: 400px;
+	margin: 350px auto 0;  /*position of scores up-dowm*/
+	padding: 25px 40px;
+	position: relative;
+    border-radius: 15px;
+	font-size: 200%;
+}
+
+.lboard_section .lboard_tabs ul{
+	display: flex;
+}
+
+
+.lboard_section .lboard_tabs ul li:hover,
+.lboard_section .lboard_tabs ul li.active{
+	color: #fff;
+}
+
+
+.lboard_wrap .lboard_item{
+	padding: 25px;
+}
+
+.lboard_wrap .lboard_mem{
+	display: flex;
+	align-items: center;
+	padding: 25px 0;
+	border-bottom: 1px solid #fff;
+}
+
+.lboard_wrap .lboard_mem:first-child{
+	padding-top: 0;
+}
+
+.lboard_wrap .lboard_mem:last-child{
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.lboard_wrap .lboard_mem .img{
+	width: 50px;
+}
+
+.lboard_wrap .lboard_mem img{
+	display: block;
+	width: 100%;
+}
+
+.lboard_wrap .lboard_mem .name_bar{
+	margin: 0 20px;
+	width: calc(100% - 150px);
+}
+
+.lboard_wrap .lboard_mem .name_bar p{
+    color:orangered;
+    font-size: 100%;
+    
+}
+
+.lboard_wrap .lboard_mem .name_bar p span{
+	margin-right: 5px;
+}
+
+.lboard_wrap .lboard_mem .points{
+	width: 100px;
+    color:orangered;
+    font-size: 100%;
+}
+
+

@@ -1,0 +1,108 @@
+<html>
+    <head>
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+
+
+        <link rel="stylesheet" href="css/reg.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="multiselect/jquery.multiselect.js"></script>
+<link rel="stylesheet" href="multiselect/jquery.multiselect.css">
+<script>
+jQuery.fn.multiselect = function() {
+    $(this).each(function() {
+        var checkboxes = $(this).find("input:checkbox");
+        checkboxes.each(function() {
+            var checkbox = $(this);
+            // Highlight pre-selected checkboxes
+            if (checkbox.prop("checked"))
+                checkbox.parent().addClass("multiselect-on");
+ 
+            // Highlight checkboxes that the user selects
+            checkbox.click(function() {
+                if (checkbox.prop("checked"))
+                    checkbox.parent().addClass("multiselect-on");
+                else
+                    checkbox.parent().removeClass("multiselect-on");
+            });
+        });
+    });
+};
+
+$(function() {
+     $(".multiselect").multiselect();
+});
+</script>
+    </head>
+    <body>
+        <h1>Register Here!</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form">
+            <br><br> 
+       
+  <label for="name" style="font-family:monospace;">Name</label>
+  <input type="text" id="fname" name="name">
+  <label for="email" style="font-family:monospace;">Email</label>
+  <input type="email" id="lname" name="email">
+  <label for="age" style="font-family:monospace;">Age</label>
+  <input type="number" id="lname" name="age">
+   <label style="font-family:monospace;">Gender</label>
+          <select name="gender" id="gender" required>
+            <option style="font-family:monospace;" value="male">Male</option>
+            <option style="font-family:monospace;" value="female">Female</option>
+          </select>
+   <label for="location" style="font-family:monospace;">location</label>
+  <input type="text" id="lname" name="location"> 
+  <br><br>
+   <label style="font-family:monospace;">Hobbies</label>
+<div class="multiselect">
+    <label><input type="checkbox" name="option[]" value="Dance" />Dance</label>
+    <label><input type="checkbox" name="option[]" value="Activity" />Activity</label>
+    <label><input type="checkbox" name="option[]" value="Sketching" />Sketching</label>
+    <label><input type="checkbox" name="option[]" value="Music" />Music</label>
+    <label><input type="checkbox" name="option[]" value="Rap" />Rap</label>
+
+</div>
+<br>
+  <label style="font-family:monospace;">Experience</label>
+          <select name="experience" id="gender" required>
+            <option style="font-family:monospace;" value="Beginner">Beginner</option>
+            <option style="font-family:monospace;" value="Intermediate">Intermediate</option>
+            <option style="font-family:monospace;" value="Advance<">Advance</option>
+          </select>
+          <br>
+   <label for="location" style="font-family:monospace;">Instagram Id</label>
+  <input type="text" id="lname" name="instaid"> 
+  <br><br><br>
+<input type="submit" class="button1" value="Register">
+            </form>
+
+            <ul id="cafe-list"></ul>
+
+        </div>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC3s2sKMf9_oZrVoQT2ENXLOivL17WqGNg",
+    authDomain: "regform-7fb59.firebaseapp.com",
+    databaseURL: "https://regform-7fb59.firebaseio.com",
+    projectId: "regform-7fb59",
+    storageBucket: "regform-7fb59.appspot.com",
+    messagingSenderId: "568630551612",
+    appId: "1:568630551612:web:9bca91bb6e4fb2b2eecf39",
+    measurementId: "G-VS5BTV7W4Q"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db=firebase.firestore();
+</script>
+
+
+        <script src="ap.js"></script>
+    </body>
+</html>
